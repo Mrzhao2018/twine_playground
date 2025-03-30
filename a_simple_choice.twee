@@ -1,0 +1,30 @@
+:: a_simple_choice
+
+A simple choice.
+
+Infront of you sit three boxes: a blue one, a green one, and a red one.
+Inside each box but one, three is a treat.
+
+Which box do you want to choose?
+
+[[the blue box|demo_basic_reavel]][$box to "blue"]
+
+[[the green box|demo_basic_reavel]][$box to "green"]
+
+[[the red box|demo_basic_reavel]][$box to "red"]
+
+[[no box|demo_basic_reavel]][$box to false]
+
+:: demo_basic_reavel
+
+<<if $box is "blue">>
+    You open the blue box and find an apple!
+<<elseif $box is "green">>
+    You open the green box and find nothing.
+<<elseif $box is "red">>
+    You open the red box and find nothing.
+<<else>>
+    You open no box.
+<</if>>
+
+[[Try again?|a_simple_choice]]
